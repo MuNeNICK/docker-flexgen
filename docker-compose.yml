@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./src:/usr/src/app
+      - ./app:/app
     deploy:
       resources:
         reservations:

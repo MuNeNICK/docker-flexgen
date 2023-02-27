@@ -1,7 +1,7 @@
-FROM python:3.9.7-slim-buster
+FROM nvcr.io/nvidia/pytorch:21.06-py3
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-RUN apt-get update && apt-get upgrade -y
+RUN pip install flexgen==0.1.5
 
-RUN pip install flexgen
+CMD ["/bin/bash"]
