@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  flexgen:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/usr/src/app
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            capabilities: [gpu]
